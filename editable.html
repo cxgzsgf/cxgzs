@@ -92,31 +92,7 @@
  
     </style>
 </head>
-<body>
-<input type="button" name="popBox" value="弹出框" onclick="popBox()">
-<div id="popLayer"></div>
-<div id="popBox">
-    <div class="close">
-        <a href="javascript:void(0)" onclick="closeBox()">关闭</a>
-    </div>
-    <div class="content">我是弹出层</div>
-</div>
-<script>
-    /*点击弹出按钮*/
-    function popBox() {
-        var popBox = document.getElementById("popBox");
-        var popLayer = document.getElementById("popLayer");
-        popBox.style.display = "block";
-        popLayer.style.display = "block";
-    };
- 
-    /*点击关闭按钮*/
-    function closeBox() {
-        var popBox = document.getElementById("popBox");
-        var popLayer = document.getElementById("popLayer");
-        popBox.style.display = "none";
-        popLayer.style.display = "none";
-    }
+
 </script>
 </body>
 </html>

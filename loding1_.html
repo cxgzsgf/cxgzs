@@ -1,0 +1,89 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<span style="font-size:18px;"> </span><span style="font-size:24px;"><meta http-equiv="refresh" content="3;URL=404.html"> </span>
+<title>可能已经超时</title>
+<style>
+body{
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#34495e;
+}
+
+.loding{
+  width:200px;
+  height:200px;
+  box-sizing:border-box;
+  border-radius:50%;
+  border-top:10px solid #e74c3c;
+  position:relative;
+  animation:a1 2s linear infinite;
+}
+
+.loding:before,.loding:after{
+  content:'';
+  width:200px;
+  height:200px;
+  position:absolute;
+  left:0;
+  top:-10px;
+  box-sizing:border-box;
+  border-radius:50%;
+}
+.loding:before{
+  border-top:10px solid #e67e22;
+  transform:rotate(120deg);
+}
+.loding:after{
+  border-top:10px solid #3498db;
+  transform:rotate(240deg);
+}
+
+.loding span{
+  text-align:center;
+  width:200px;
+  height:200px;
+  position:absolute;
+  line-height:200px;
+  color:#fff;
+  animation:a2 2s linear infinite;
+}
+
+@keyframes a1{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes a2{
+  to{
+    transform:rotate(-360deg);
+  }
+}
+</style>
+</head>
+<body translate="no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+<div class="loding">
+<span>可能已经超时</span>
+</div>
+</body>
+</html>
+</body>
+</html>

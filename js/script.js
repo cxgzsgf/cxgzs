@@ -2,7 +2,7 @@
 <script>
 function openly(){
         if(window.name==""){
-            window.location.href="hy.html";
+            window.location.href="call.html";
         }
         window.name="onload";
 }

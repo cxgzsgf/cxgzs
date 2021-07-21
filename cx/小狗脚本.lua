@@ -77,7 +77,6 @@ function Main0()
 SN = gg.choice({
 	 "服务器功能区",
 	 "普通联机功能区",
-	 "退出脚本",
 }, nil, "-by小狗")
 if SN==1 then
 	 Main1()

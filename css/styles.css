@@ -1,7 +1,5 @@
 
-@media (min-width:481px) {div.paged-element-visible.column-section {display: flex; position: relative; top: auto; left: auto;}div.column-section>.silex-element-content {display: none;}div.column-section>.editable-style {flex: 1 1 auto; position: relative; top: auto; left: auto; width: auto; height: auto; min-height: 20px; margin: 15px; transition: margin .2s ease;}div.editable-style.drop-zone-candidate>.editable-style {margin-bottom: 55px;}.silex-runtime div.column-section>.editable-style {margin: 0;}div.column-section>.editable-style>.editable-style {position: relative; top: auto; left: auto; margin: auto;}}.wrapper {height: 10vh; display: flex; align-items: center; justify-content: center;}.typing-demo {width: 22ch; animation: typing 2s steps(22), blink .5s step-end infinite alternate; white-space: nowrap; overflow: hidden; border-right: 3px solid; font-family: monospace; font-size: 2em;}@keyframes typing { 
-  from {width: 0;} 
-}@keyframes blink { 
-  50% {border-color: transparent;} 
-}
-.website-width {width: 1196px;}body.silex-runtime {opacity: 1;}
+
+.body-initial {background-color: rgba(255,255,255,1); position: static;}.silex-id-1478366444112-1 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366444112-0 {background-color: transparent; min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1474394621033-3 {position: static; margin-top: -1px;}.silex-id-1474394621032-2 {background-color: transparent; min-height: 600px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1478366450713-3 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366450713-2 {background-color: transparent; min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1442914737143-3 {width: 241px; top: 26px; left: 494px; min-height: 51px; position: absolute;}@media only screen and (max-width: 480px) {}
+.text-element > .silex-element-content {font-family: 'Roboto', sans-serif;}
+.website-width {width: 1200px;}@media (min-width: 481px) {.silex-editor {min-width: 1400px;}}body.silex-runtime {opacity: 1;}

@@ -1,0 +1,636 @@
+gg.alert("欢迎使用小狗破解脚本系列")
+gg.alert("已经为您破解了15块钱的辅助，去除了ID验证")
+gg.alert("破解之后的脚本没有任何加密，采用源代码方式")
+gg.alert("千万不要传给别人，否则可能会对我造成不好的影响")
+gg.alert("小狗破解-QQ:2213862094")
+gg.alert("现在，我们开始使用吧！")
+DWORD=gg.TYPE_DWORD DOUBLE=gg.TYPE_DOUBLE FLOAT=gg.TYPE_FLOAT WORD=gg.TYPE_WORD BYTE=gg.TYPE_BYTE XOR=gg.TYPE_XOR QWORD=gg.TYPE_QWORD
+
+function mwh(mwh1,mwh2,py) local mwh={} mwh[1]={} mwh[1].address=mwh1 mwh[1].flags=mwh2 mwh[1].value=py gg.setValues(mwh) end
+
+function split(szFullString, szSeparator)
+  local nFindStartIndex = 1
+  local nSplitIndex = 1
+  local nSplitArray = {}
+  while true do
+    local nFindLastIndex = string.find
+    (szFullString, szSeparator, nFindStartIndex)
+    if not nFindLastIndex then
+      nSplitArray[nSplitIndex] =
+      string.sub(szFullString, nFindStartIndex, string.len
+      (szFullString))
+      break end
+    nSplitArray[nSplitIndex] = string.sub
+    (szFullString, nFindStartIndex, nFindLastIndex - 1)
+    nFindStartIndex = nFindLastIndex + string.len
+    (szSeparator)
+    nSplitIndex = nSplitIndex + 1 end return
+  nSplitArray end
+function xgxc(szpy, qmxg)
+  for x = 1, #(qmxg) do
+    xgpy = szpy + qmxg[x]["offset"]
+    xglx = qmxg[x]["type"]
+    xgsz = qmxg[x]["value"]
+    xgdj = qmxg[x]["freeze"]
+    if xgdj == nil or xgdj == "" then
+      gg.setValues({[1]
+        = {address = xgpy, flags = xglx, value = xgsz}})
+     else
+      gg.addListItems({[1]
+        = {address = xgpy, flags = xglx,
+          freeze = xgdj, value = xgsz}}) end
+    xgsl = xgsl + 1 xgjg = true end end
+function xqmnb(qmnb)
+  gg.clearResults()
+  gg.setRanges(qmnb[1]["memory"])
+  gg.toast("开始搜索💫") gg.setVisible(false)
+  gg.searchNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.setVisible(false)
+  if gg.getResultCount() == 0 then gg.setVisible(false)
+    gg.toast(qmnb[2]["name"] .. "修改失败🤣") gg.setVisible(false)
+   else
+    gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.setVisible(false)
+    gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.setVisible(false)
+    gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.setVisible(false)
+    gg.setVisible(false) if gg.getResultCount() == 0 then
+      gg.setVisible(false) gg.toast(qmnb[2]["name"] .. "修改失败🤣") gg.setVisible(false)
+      gg.setVisible(false) else
+      gg.setVisible(false) sl = gg.getResults(999999)
+      gg.setVisible(false) sz = gg.getResultCount()
+      gg.setVisible(false) xgsl = 0 if sz > 999999 then
+        gg.setVisible(false) sz = 999999 end for i = 1, sz do
+        pdsz = true for v = 4, #(qmnb) do if
+            pdsz == true then gg.setVisible(false)
+            pysz = {} pysz[1]
+            = {} pysz[1].address
+            = sl[i].address + qmnb[v]["offset"] pysz[1].flags
+            = qmnb[v]["type"]
+            szpy = gg.getValues(pysz)
+            pdpd = qmnb[v]["lv"] .. ";" .. szpy[1].value szpd
+            = split(pdpd, ";") tzszpd
+            = szpd[1] pyszpd = szpd[2]
+            if tzszpd == pyszpd then
+              pdjg = true pdsz = true else
+              pdjg = false pdsz = false end end end if
+          pdjg == true then szpy
+          = sl[i].address xgxc(szpy, qmxg) end end
+      gg.setVisible(false) if xgjg == true then
+        gg.setVisible(false) gg.toast(qmnb[2]["name"] .. "已修改✨")
+       else
+        gg.setVisible(false) gg.toast(qmnb[2]["name"] .. "修改失败🤣")
+      end end end end
+
+function Main()
+  menu = gg.choice({
+    '✨功能区✨',
+    '🎁刷物区🎁',
+    '❌退出插件❌'},
+  nil,'✔️Two Kittens插件3.0✔️')
+  if menu == 1 then A() end
+  if menu == 2 then B() end
+  if menu == 3 then Exit() end
+  XGCK=-1
+end
+
+A={} A2="[ON]"
+
+
+
+function A()
+  menu1 = gg.multiChoice({
+    '✅全局防封✅',
+    '💦稳定踏空💦',
+    '🔆杀戮光环🔆',
+    '🖤开启穿墙🖤',
+    '💗关闭穿墙💗',
+    '💓夜视远跳💓',
+    '🎃潜行加速🎃',
+    '🎈全局变速🎈',
+    '🎄慢动作开🎄',
+    '💥慢动作关💥',
+    '💫玩家长臂💫',
+    '🎗️疾跑冲刺🎗️',
+    '🔷调整视野🔷',
+    '❌返回主页❌'},
+  nil,'⭐Two Kittens功能区⭐')
+  if menu1 == nil then else
+    if menu1[1] == true then a1() end
+    if menu1[2] == true then a2() end
+    if menu1[3] == true then a3() end
+    if menu1[4] == true then a4() end
+    if menu1[5] == true then a5() end
+    if menu1[6] == true then a6() end
+    if menu1[7] == true then a7() end
+    if menu1[8] == true then a8() end
+    if menu1[9] == true then a9() end
+    if menu1[10] == true then a10() end
+    if menu1[11] == true then a11() end
+    if menu1[12] == true then a12() end
+    if menu1[13] == true then a13() end
+    if menu1[14] == true then HOME() end
+  end
+  GLWW=-1
+end
+
+
+
+function B()
+  menu1 = gg.multiChoice({
+    '🗯创造之手🗯️',
+    '❕木棍改合金锭❕',
+    '🌙拉杆改钻剑🌙',
+    '💥钓鱼竿改钻剑💥',
+    '🎵附魔书改钻剑🎵',
+    '💤弓改钻剑💤',
+    '🌲合金剑改物🌲',
+    '💢手持3级附魔💢',
+    '❌返回主页❌'},
+  nil,'⭐Two Kittens刷物区⭐')
+  if menu1 == nil then else
+    if menu1[1] == true then b1() end
+    if menu1[2] == true then b2() end
+    if menu1[3] == true then b3() end
+    if menu1[4] == true then b4() end
+    if menu1[5] == true then b5() end
+    if menu1[6] == true then b6() end
+    if menu1[7] == true then b7() end
+    if menu1[8] == true then b8() end
+    if menu1[9] == true then HOME() end
+  end
+  GLWW=-1
+end
+
+
+
+function a1()
+  gg.clearResults()
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber(":salog", gg.TYPE_AUTO, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(1000)
+  gg.editAll('97',gg.TYPE_BYTE)
+  gg.sleep(500)
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.searchNumber(":salog", gg.TYPE_AUTO, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(1000)
+  gg.editAll('97',gg.TYPE_BYTE)
+  gg.sleep(500)
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.searchNumber(":salog", gg.TYPE_AUTO, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(1000)
+  gg.editAll('97',gg.TYPE_BYTE)
+  gg.toast("全局防封开启成功")
+end
+
+
+
+function a2()
+  qmnb = {
+    {memory = 4},
+    {["name"] = "踏空"},
+    {["value"] = 2000, ["type"] = 4},
+    {["lv"] = 1036831949, ["offset"] = 472, ["type"] = 4},
+  }
+  qmxg={
+    {["value"] = 16777473, ["offset"] = -1604, ["type"] = 4, freeze = true},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function a3()
+  gg.clearResults()
+  gg.setRanges(4)
+  gg.searchNumber("0.60000002384~0.8000000119F;1.79999995232F;-1.0F::57", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("0.60000002384~0.8000000119F;1.79999995232F;-1.0F::57", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  jg=gg.getResults(100)
+  sl=gg.getResultCount()
+  for i = 1, sl do
+    dzy=jg[i].address
+    gg.addListItems({[1] = {address = dzy,flags = gg.TYPE_FLOAT,freeze = true,value = 9}})
+  end
+  gg.clearResults()
+  gg.setRanges(4)
+  gg.searchNumber("1.62001001835F;0.5625F::21", gg.TYPE_FLOAT)
+  A = gg.getResultCount()
+  if A == 0 then
+    gg.alert("未知原因 开启失败") os.exit() end
+  gg.searchNumber("1.62001001835", gg.TYPE_FLOAT)
+  if A == 0 then
+    gg.alert("未知原因 开启失败") os.exit() end
+  gg.getResults(20)
+  gg.editAll("0.15", gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.setRanges(4)
+  gg.searchNumber("540672;98312;1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("98312", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  jg=gg.getResults(100)
+  sl=gg.getResultCount()
+  if sl>100 then sl=100 end
+  for i = 1, sl do
+    dzy=jg[i].address
+    gg.addListItems({[1] = {address = dzy,flags = gg.TYPE_DWORD,freeze = true,value = 8486920}})
+  end
+  gg.toast("杀戮光环开启成功，无效果点击退出插件即可")
+  gg.clearResults()
+end
+
+
+
+function a4()
+  gg.clearResults()
+  gg.setRanges(16384)
+  gg.searchNumber("-0.50289154053;0.00100000005;8,493.265625::13",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+  gg.searchNumber("0.00100000005",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+  gg.getResults(100)
+  gg.editAll("9",gg.TYPE_FLOAT)
+  gg.toast("开启成功")
+  gg.clearResults()
+end
+
+
+
+function a5()
+  gg.clearResults()
+  qmnb = {
+    {["memory"] = 16384},
+    {["name"] = "飞行穿墙关"},
+    {["value"] = 1226159488, ["type"] = 4},
+    {["lv"] = 981668463, ["offset"] = -8, ["type"] = 4},
+  }
+  qmxg = {
+    {["value"] = 981668463, ["offset"] = 84, ["type"] = 4},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function a6()
+  gg.clearResults()
+  gg.setRanges(16384)
+  gg.searchNumber("0.2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("0.2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  jg = gg.getResults(500)
+  sl = gg.getResultCount()
+  do
+  do
+  for _FORV_3_ = 1, sl do
+    dzy = jg[_FORV_3_].address
+    gg.addListItems({
+      [1] = {
+        address = dzy,
+        flags = gg.TYPE_FLOAT,
+        freeze = true,
+        value = "2"
+      }
+    })
+  end
+end
+end
+gg.toast("远跳夜视开启成功")
+gg.clearResults()
+end
+
+
+
+function a7()
+  gg.clearResults()
+  gg.setRanges(16384)
+  gg.searchNumber("0.1;0.98;0.9::9", gg.TYPE_FLOAT)
+  gg.searchNumber("0.98", gg.TYPE_FLOAT)
+  gg.getResults(2)
+  gg.editAll("20", gg.TYPE_FLOAT)
+  gg.toast("潜行加速开启成功")
+  gg.sleep(1000)
+  gg.clearResults()
+end
+
+
+
+function a8()
+  gg.clearResults()
+  input4 = gg.prompt({'请输入所需修改数值（推荐0.2~0.5）\n数值越大越快，不过屏幕会引起不适\n点击确定后请保持疾跑状态'},{[1]=0.2},{[1]='number'});
+  gg.toast('请保持疾跑状态')
+  gg.searchNumber('0.1;0;3.4028235e38;0.1;1.1011996e36::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber('0.1', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(9999)
+  gg.editAll(input4[1], gg.TYPE_FLOAT)
+  gg.toast("全局变速已开启")
+  gg.clearResults()
+end
+
+
+
+function a9()
+  gg.clearResults()
+  gg.setRanges(16384)
+  gg.searchNumber("0.2;0.001;0;0.1::13", gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0, -1)
+  gg.searchNumber("0.001", gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0, -1)
+  gg.getResults(10)
+  gg.editAll("0.0005",gg.TYPE_FLOAT)
+  gg.toast("慢动作开启成功")
+  gg.clearResults()
+end
+
+
+
+function a10()
+  gg.clearResults()
+  gg.setRanges(16384)
+  gg.searchNumber("0.2;0.0005;0;0.1::13", gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0, -1)
+  gg.searchNumber("0.0005", gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0, -1)
+  gg.getResults(10)
+  gg.editAll("0.001",gg.TYPE_FLOAT)
+  gg.toast("慢动作恢复成功")
+  gg.clearResults()
+end
+
+
+
+function a11()
+  if A2 == "[ON]" then
+    gg.toast("Don't move when you open it(开启时别动)")
+    T=gg.prompt({
+      "Please enter the range of collision boxes you want to change(default range 0.6)\n(请输入您要改的碰撞箱范围，建议3～6)"})
+    if T==nil then
+      print("You canceled it(您取消了)") os.exit()
+     else
+      local JT=""..T[1]
+      if JT=="" then
+        print("You haven't entered yet(您还未输入)") os.exit()
+      end
+      gg.clearResults()
+      gg.setRanges(4)
+      gg.searchNumber("1,058,642,330;1,072,064,102;-1,113,550,802::41", gg.TYPE_DWORD)
+      gg.searchNumber("1,058,642,330", gg.TYPE_DWORD)
+      jg = gg.getResults(100)
+      sl = gg.getResultCount()
+      for _FORV_3_ = 1, sl do
+        dzy = jg[_FORV_3_].address
+        gg.addListItems({
+          [1] = {
+            address = dzy,
+            flags = gg.TYPE_DWORD,
+            freeze = true,
+            value = 1058642330
+          }
+        })
+      end
+      gg.clearResults()
+      gg.searchNumber("1,058,642,330;1,072,064,102;-1,113,550,802::41", gg.TYPE_DWORD)
+      gg.searchNumber("1,072,064,102", gg.TYPE_DWORD)
+      jg = gg.getResults(100)
+      sl = gg.getResultCount()
+      for _FORV_3_ = 1, sl do
+        dzy = jg[_FORV_3_].address
+        gg.addListItems({
+          [1] = {
+            address = dzy,
+            flags = gg.TYPE_DWORD,
+            freeze = true,
+            value = 1072064102
+          }
+        })
+      end
+
+      gg.clearResults()
+      gg.setRanges(16384)
+      local time=os.clock()
+      gg.searchNumber("0.005", gg.TYPE_FLOAT)
+
+      local X = gg.getResultCount()
+      if X == 0 then
+        gg.alert("To search for data(未搜索到数据)","Exit(退出脚本)")
+        os.exit()
+      end
+
+      gg.getResults(1000)
+      gg.editAll(T[1],gg.TYPE_FLOAT)
+      gg.clearResults()
+
+      gg.toast("Custom collision box opened successfully(自定义碰撞箱开启成功)")
+      gg.sleep(1000)
+      gg.toast("Time consuming: "..os.clock()-time.."s".."(耗时:"..os.clock()-time.."s")
+      A2 = "[OFF]"
+    end
+   elseif A2 == "[OFF]" then
+    gg.toast("Don't move when you open it(开启时别动)")
+    gg.clearResults()
+    gg.setRanges(16384)
+    local time=os.clock()
+    gg.clearResults()
+    gg.searchNumber(T[1], gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("0.005",gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast("Custom collision box Recovery Success(自定义碰撞箱恢复成功)")
+    gg.sleep(1000)
+    gg.toast("Time consuming: "..os.clock()-time.."s".."(耗时:"..os.clock()-time.."s")
+    A2 = "[ON]"
+  end
+end
+
+
+
+function a12()
+  gg.clearResults()
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.searchNumber("9 640 188 314", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+  revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("9666 088141", gg.TYPE_QWORD)
+  gg.toast("疾跑冲刺开启成功")
+  gg.clearResults()
+end
+
+
+
+
+function a13()
+  gg.clearResults()
+  a = gg.prompt({
+    "最高110,最低30"
+  }, {
+    [1] = 30
+  }, {
+    [1] = "number"
+  })[1]
+  gg.setRanges(4)
+  gg.searchNumber("30.0;110.0;60::21", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("30", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  jg = gg.getResults(100)
+  sl = gg.getResultCount()
+  if sl > 50 then
+    gg.clearResults()
+    gg.alert("数据异常", "清除并退出")
+    os.exit()
+  end
+  do
+  do
+  for _FORV_3_ = 1, sl do
+    gg.setValues({
+      {
+        address = jg[_FORV_3_].address + 8,
+        flags = gg.TYPE_FLOAT,
+        value = a
+      }
+    })
+  end
+end
+end
+gg.toast("视野已修改成功\n共修改" .. sl .. "条数据")
+gg.clearResults()
+end
+
+
+function b1()
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "创造之手"},
+    {["value"] = -1113550802, ["type"] = 4},
+    {["lv"] = 65793, ["offset"] = -1576, ["type"] = 4},
+    {["lv"] = 16777216, ["offset"] = -780, ["type"] = 4},
+  }
+  qmxg = {
+    {["value"] = 1, ["offset"] = -2040, ["type"] = 4},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b2()
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "木棍改合金锭"},
+    {["value"] = 1509138735, ["type"] = 4},
+    {["lv"] = 1.0, ["offset"] = -32, ["type"] = 16},
+  }
+  qmxg={
+    {["value"] = 595, ["offset"] = -22, ["type"] = 2},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b3()
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "拉杆改钻石剑"},
+    {["value"] = -1787903893, ["type"] = 4},
+    {["lv"] = 1.0, ["offset"] = -32, ["type"] = 16},
+  }
+  qmxg={
+    {["value"] = 316, ["offset"] = -22, ["type"] = 2},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b4()
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "钓鱼竿改钻石剑"},
+    {["value"] = 1417278123, ["type"] = 4},
+    {["lv"] = 1.0, ["offset"] = -32, ["type"] = 16},
+  }
+  qmxg={
+    {["value"] = 316, ["offset"] = -22, ["type"] = 2},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b5()
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "附魔书改钻石剑"},
+    {["value"] = -1965793473, ["type"] = 4},
+    {["lv"] = 1.0, ["offset"] = -32, ["type"] = 16},
+  }
+  qmxg={
+    {["value"] = 316, ["offset"] = -22, ["type"] = 2},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b6()
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "弓改钻石剑"},
+    {["value"] = -656824552, ["type"] = 4},
+    {["lv"] = 1.0, ["offset"] = -32, ["type"] = 16},
+  }
+  qmxg={
+    {["value"] = 316, ["offset"] = -22, ["type"] = 2},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b7()
+  W=gg.prompt({
+    "输入需要的物品id\n默认面包261\n钓鱼竿391 弓300 合金剑596 合金头盔601 鞘翅556\n钻剑316 盾牌356 合金镐598 书386 刷怪笼52\n青金矿21 青金块22 钻块57 合金块-270 重生石-272\n三叉戟538 盾牌356 小金人560 脑袋508 烈焰棒422 附魔台116 附魔瓶384 钻块57 书架62"}, {"261"}, {"text"})
+  if W==nil then os.exit(print("空")) end
+  qmnb = {
+    {["memory"] = 4},
+    {["name"] = "合金剑改物"},
+    {["value"] = 1121238658, ["type"] = 4},
+    {["lv"] = 1.0, ["offset"] = -32, ["type"] = 16},
+  }
+  qmxg={
+    {["value"] = W[1], ["offset"] = -22, ["type"] = 2},
+  }
+  xqmnb(qmnb)
+end
+
+
+
+function b8()
+  gg.clearResults()
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.searchNumber("-104B;3W;2B::25", WORD, false, gg.SIGN_EQUAL, 0, -1)
+  if gg.getResultCount() == 0 then
+    gg.toast("开启失败")
+   else
+    gg.searchNumber("-104B;3W::5",WORD , false, gg.SIGN_EQUAL, 0, -1)
+    gg.searchNumber("3",WORD , false, gg.SIGN_EQUAL, 0, -1)
+    gg.getResults(1000)
+    gg.editAll("32767", WORD)
+    gg.toast("32k开启成功")
+    gg.clearResults()
+  end
+end
+
+
+
+function Exit()
+  print("感谢使用Two Kitten插件3.0 小狗破解")
+  os.exit()
+end
+
+
+
+function HOME()
+  lw=1
+  Main()
+end
+
+
+
+cs = 'by小狗2213862094破解'
+while(true)do
+  if gg.isVisible(true) then
+    XGCK=1
+    gg.setVisible(false)
+  end
+  gg.clearResults()
+  if XGCK==1 then
+    Main()
+  end
+end
